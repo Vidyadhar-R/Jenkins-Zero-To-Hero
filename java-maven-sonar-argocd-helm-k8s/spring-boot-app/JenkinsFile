@@ -5,9 +5,6 @@ pipeline {
             args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
-    triggers {
-        cron('*/2 * * * *') // Runs the pipeline every 2 minutes
-    }
     stages {
         stage('Checkout') {
             steps {
